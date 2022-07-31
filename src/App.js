@@ -7,6 +7,7 @@ import Login from "./Pages/Login/Login";
 
 function App() {
   return (
+    // Routing Pages
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
