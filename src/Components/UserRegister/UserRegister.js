@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import axios from "axios";
 const UserRegister = () => {
     const [userName, setUserName] = useState('');
     const [userNumber, setUserNumber] = useState('');
@@ -19,6 +19,13 @@ const UserRegister = () => {
 
     const confirmUserInfo = (event) => {
         event.preventDefault();
+        axios.post("http://localhost:8080/members/new", {
+            name : userName,
+            phone : userNumber,
+            start : "2022-07-08",
+            finish : userDate
+        })
+        
         console.log(userName, userNumber, userDate)
     }
     return (

@@ -10,13 +10,16 @@ import Register from "./Pages/Register/Register";
 function App() {
   return (
     // Routing Pages
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element= {<Register />} />
-      </Routes>
-    </BrowserRouter>
+    <div className = "allBody">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element= {<Register />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
+    
   );
 }
 
